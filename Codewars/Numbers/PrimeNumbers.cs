@@ -18,6 +18,20 @@ namespace Codewars.Numbers
             return n != 1;
         }
 
+        public static int GetNextPrime(this int n)
+        {
+            if (n == 2)
+                return 3;
+            var isPrime = false;
+            var next = n + 2;
+            while (!isPrime)
+            {
+                isPrime = next.IsPrime();
+                next = isPrime ? next : next + 2;
+            }
+            return next;
+        }
+
         public static int[] GeneratePrimesBruteForce(int max)
         {
             var primes = new List<int>() {2};

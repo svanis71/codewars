@@ -9,3 +9,6 @@
 /Codewars/bin/Debug
 /Codewars.Test/obj
 /Codewars/obj
+/Codewars.Test/bin/Debug
+/Katas/.vscode
+*.suo
