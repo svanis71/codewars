@@ -45,6 +45,7 @@
     <Compile Include="Brace.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="LoopCount.cs" />
+    <Compile Include="MiniStringFuck\MyFirstInterpreter.cs" />
     <Compile Include="MyBigInt.cs" />
     <Compile Include="PowerSum.cs" />
     <Compile Include="PrimeDecomp.cs" />
