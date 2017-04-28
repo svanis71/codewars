@@ -1,19 +1,14 @@
-﻿
-using System;
-using System.CodeDom;
-using System.Collections.Generic;
-using System.Net.NetworkInformation;
-using System.Runtime.CompilerServices;
+﻿using System.Collections.Generic;
 using System.Text;
 
-namespace Codewars
+namespace Codewars.Numbers
 {
-    public class MyBigInt
+    public class MyBigInt_v1
     {
         private readonly List<byte> _value = new List<byte>();
         public int DataLength => _value.Count;
 
-        public MyBigInt(int intValue)
+        public MyBigInt_v1(int intValue)
         {
             var t = intValue;
             while (t != 0)
@@ -24,12 +19,12 @@ namespace Codewars
             }
         }
 
-        public MyBigInt()
+        public MyBigInt_v1()
         {
             _value.Add((byte)0);
         }
 
-        public MyBigInt(string newVal)
+        public MyBigInt_v1(string newVal)
         {
             foreach(var c in newVal)
                 _value.Insert(0, (byte)(c-'0'));
@@ -52,12 +47,12 @@ namespace Codewars
             return sum;
         }
 
-        public static MyBigInt operator +(MyBigInt bi1, MyBigInt bi2)
+        public static MyBigInt_v1 operator +(MyBigInt_v1 bi1, MyBigInt_v1 bi2)
         {
             var carry = 0;
             var len1 = bi1.DataLength;
             var len2 = bi2.DataLength;
-            var result = new MyBigInt();
+            var result = new MyBigInt_v1();
         
             while (len1 > 0 && len2 > 0)
             {
@@ -73,10 +68,10 @@ namespace Codewars
             if(carry > 0)
                 result.InsertByte((byte)carry);
             return result;
-//            return new MyBigInt(Add(n1.ToString(), n2.ToString()));
+//            return new MyBigInt_v1(Add(n1.ToString(), n2.ToString()));
         }
 
-        //public MyBigInt MultiplyBy(MyBigInt bi2)
+        //public MyBigInt_v1 MultiplyBy(MyBigInt_v1 bi2)
         //{
         //    var over = _value;
         //    var under = bi2.ToString();
@@ -125,20 +120,20 @@ namespace Codewars
         //        sum = Add(sum, rows[r]);
         //    }
         //    sum += tail;
-        //    return new MyBigInt(sum);
+        //    return new MyBigInt_v1(sum);
         //}
 
-        //public static MyBigInt operator *(MyBigInt n1, MyBigInt n2)
+        //public static MyBigInt_v1 operator *(MyBigInt_v1 n1, MyBigInt_v1 n2)
         //{
         //    return n1.MultiplyBy(n2);
         //}
 
-        //public static bool operator !=(MyBigInt n1, MyBigInt n2)
+        //public static bool operator !=(MyBigInt_v1 n1, MyBigInt_v1 n2)
         //{
         //    return n1.ToString() != n2.ToString();
         //}
 
-        //public static bool operator ==(MyBigInt n1, MyBigInt n2)
+        //public static bool operator ==(MyBigInt_v1 n1, MyBigInt_v1 n2)
         //{
         //    return n1.ToString() == n2.ToString();
         //}

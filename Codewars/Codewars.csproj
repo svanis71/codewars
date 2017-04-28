@@ -45,8 +45,10 @@
     <Compile Include="Brace.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="LoopCount.cs" />
+    <Compile Include="Magnets.cs" />
     <Compile Include="MiniStringFuck\MyFirstInterpreter.cs" />
-    <Compile Include="MyBigInt.cs" />
+    <Compile Include="Numbers\MyBigInt.cs" />
+    <Compile Include="Numbers\MyBigInt_v1.cs" />
     <Compile Include="PowerSum.cs" />
     <Compile Include="PrimeDecomp.cs" />
     <Compile Include="Numbers\PrimeNumbers.cs" />
@@ -56,6 +58,7 @@
     <Compile Include="RomanNumberEncoder.cs" />
     <Compile Include="Rot13Encrypter.cs" />
     <Compile Include="SumOfDivided.cs" />
+    <Compile Include="YpkCalculator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

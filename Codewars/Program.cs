@@ -18,11 +18,11 @@ namespace Codewars
             return list.ToArray();
         }
 
-        //static MyBigInt Fact(int n)
+        //static MyBigInt_v1 Fact(int n)
         //{
         //    if (n == 1)
-        //        return new MyBigInt(1);
-        //    return new MyBigInt(n) * Fact(n - 1);
+        //        return new MyBigInt_v1(1);
+        //    return new MyBigInt_v1(n) * Fact(n - 1);
         //}
 
         static int ReverseInt(int n)
@@ -58,11 +58,11 @@ namespace Codewars
             //}
             //Console.WriteLine($"5! = {Fact(5)}");
             //Console.WriteLine($"100! = {Fact(100)}");
-            //var b1 = new MyBigInt(123456);
-            //var b2 = new MyBigInt(7891);
+            //var b1 = new MyBigInt_v1(123456);
+            //var b2 = new MyBigInt_v1(7891);
             //var res = Fact(999);
-            //var b1 = new MyBigInt(1587);
-            //var b2 = new MyBigInt(599);
+            //var b1 = new MyBigInt_v1(1587);
+            //var b2 = new MyBigInt_v1(599);
             //Console.WriteLine((b1+b2).ToString());
             Console.ReadKey();
         }
