@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Brace.cs" />
     <Compile Include="Extensions.cs" />
+    <Compile Include="KPrimes.cs" />
     <Compile Include="LoopCount.cs" />
     <Compile Include="Magnets.cs" />
     <Compile Include="MiniStringFuck\MyFirstInterpreter.cs" />
