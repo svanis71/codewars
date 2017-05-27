@@ -35,6 +35,8 @@ namespace Codewars.Test
         [TestMethod]
         public void KPrimesTest2()
         {
+            // 4, 6, 9, 10, 14, 15, 21, 22, 25, 26, 33, 34, 35, 38, 39, 46, 49, 51, 55, 57, 58, 62, 65, 69, 74, 77, 82, 85, 86, 87, 91, 93, 94, 95
+            // 4, 6, 9, 10, 14, 15, 21, 22, 25, 26, 33, 34, 35, 38, 39, 46, 49, 51, 55, 58, 62, 65, 69, 74, 77, 82, 85, 86, 87, 91, 93, 94, 95
             RunTest(Array2String(KPrimes.CountKprimes(2, 0, 100)),
                 Array2String(new long[]
                 {4, 6, 9, 10, 14, 15, 21, 22, 25, 26, 33, 34, 35, 38, 39, 46, 49, 51,
@@ -73,6 +75,20 @@ namespace Codewars.Test
         }
 
         [TestMethod]
+        public void KPrimesTest7()
+        {
+            // Find 6-primes from 5514238 to 5519031
+            Console.WriteLine(Array2String(KPrimes.CountKprimes(6, 5514238, 5519031)));
+        }
+
+        [TestMethod]
+        public void KPrimesTest8()
+        {
+            // Find 6-primes from 6635684 to 6639960
+            Console.WriteLine(Array2String(KPrimes.CountKprimes(6, 6635684, 6639960)));
+        }
+
+        [TestMethod]
         public void KPrimesPuzzleTest1()
         {
             Assert.AreEqual(1, KPrimes.Puzzle(138));
@@ -87,7 +103,7 @@ namespace Codewars.Test
         [TestMethod]
         public void KPrimesPuzzleTest3()
         {
-            Assert.AreEqual(156, KPrimes.Puzzle(639));
+            Assert.AreEqual(154, KPrimes.Puzzle(639));
         }
     }
 }

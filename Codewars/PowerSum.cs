@@ -12,22 +12,30 @@ namespace Codewars
             {
                 if (IsPowerSum(num))
                 {
-                    Trace.WriteLine($"Found {num}!");
                     n--;
                 }
             }
             return num - 1;
         }
 
-        private static bool IsPowerSum(long n)
+        public static bool IsPowerSum(long n)
         {
-            var chars = n.ToString().ToCharArray();
-            var sum = chars.Sum(ch => ch - '0');
-            if (sum <= 1) return false;
-            var prod = n;
-            while (prod % sum == 0)
-                prod /= sum;
-            return prod == 1;
+            var exp = 1;
+            var k = n;
+            var sum = 0L;
+            var cnt = 0;
+            while (k > 0)
+            {
+                sum += (k % 10);
+                k /= 10;
+            }
+            if (sum > 1)
+            {
+                while (n % sum == 0)
+                    n /= sum;
+                return n == 1;
+            }
+            return false;
         }
     }
 }
