@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace Codewars
@@ -7,35 +8,28 @@ namespace Codewars
     {
         public static long PowerSumDigTerm(int n)
         {
-            long num = 11;
-            for (; n > 0; num++)
+            var l = new List<long>();
+            for (var i = 2L; i < 100; i++)
             {
-                if (IsPowerSum(num))
-                {
-                    n--;
+                for(var v = i*i; v > 0 && v < long.MaxValue; v *= i)
+                { 
+                    if (DigitSum(v) == i)
+                        l.Add(v);
                 }
             }
-            return num - 1;
+            l.Sort();
+            return l[n-1];
         }
 
-        public static bool IsPowerSum(long n)
+        private static long DigitSum(long n)
         {
-            var exp = 1;
-            var k = n;
             var sum = 0L;
-            var cnt = 0;
-            while (k > 0)
+            while (n > 0)
             {
-                sum += (k % 10);
-                k /= 10;
+                sum += (n % 10);
+                n /= 10;
             }
-            if (sum > 1)
-            {
-                while (n % sum == 0)
-                    n /= sum;
-                return n == 1;
-            }
-            return false;
+            return sum;
         }
     }
 }

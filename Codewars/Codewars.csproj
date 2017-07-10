@@ -58,6 +58,7 @@
     <Compile Include="RomanNumberDecoder.cs" />
     <Compile Include="RomanNumberEncoder.cs" />
     <Compile Include="Rot13Encrypter.cs" />
+    <Compile Include="StringMerger.cs" />
     <Compile Include="SumOfDivided.cs" />
     <Compile Include="YpkCalculator.cs" />
   </ItemGroup>

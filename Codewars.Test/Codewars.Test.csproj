@@ -65,6 +65,7 @@
     <Compile Include="PrimeSieveTests.cs" />
     <Compile Include="MagnetsTest.cs" />
     <Compile Include="KPrimeTests.cs" />
+    <Compile Include="StrringMergerTests.cs" />
     <Compile Include="YpkCalculatorTests.cs" />
   </ItemGroup>
   <ItemGroup>
