@@ -60,12 +60,14 @@
     <Compile Include="BraceTest.cs" />
     <Compile Include="Rot13EncrypterTests.cs" />
     <Compile Include="ArrayTests.cs" />
+    <Compile Include="SimpleCalculatorTest.cs" />
     <Compile Include="SumOfDividedTests.cs" />
     <Compile Include="PrimeDecompTest.cs" />
     <Compile Include="PrimeSieveTests.cs" />
     <Compile Include="MagnetsTest.cs" />
     <Compile Include="KPrimeTests.cs" />
     <Compile Include="StrringMergerTests.cs" />
+    <Compile Include="SimpleEncryptionTest.cs" />
     <Compile Include="YpkCalculatorTests.cs" />
   </ItemGroup>
   <ItemGroup>

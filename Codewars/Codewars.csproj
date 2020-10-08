@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Brace.cs" />
     <Compile Include="Extensions.cs" />
+    <Compile Include="Kata.cs" />
     <Compile Include="KPrimes.cs" />
     <Compile Include="LoopCount.cs" />
     <Compile Include="Magnets.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="RomanNumberDecoder.cs" />
     <Compile Include="RomanNumberEncoder.cs" />
     <Compile Include="Rot13Encrypter.cs" />
+    <Compile Include="Evaluator.cs" />
     <Compile Include="StringMerger.cs" />
     <Compile Include="SumOfDivided.cs" />
     <Compile Include="YpkCalculator.cs" />
