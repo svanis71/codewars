@@ -12,3 +12,6 @@
 /Codewars.Test/bin/Debug
 /Katas/.vscode
 *.suo
+.idea
+.pyc
+venv/
