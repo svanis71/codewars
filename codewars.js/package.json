@@ -1,0 +1,17 @@
+{
+  "name": "codewars",
+  "version": "1.0.0",
+  "description": "Codewars solutions in javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "author": "Me",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.0"
+  },
+  "jest": {
+    
+  }
+}

@@ -1,13 +1,7 @@
 import unittest
-from re import sub
 
+from remove_parentheses import remove_parentheses
 
-def remove_parentheses(s):
-    return s if s.find('(') < 0 else remove_parentheses(sub(r'\([\w\s]*\)', '', s))
-    # rs = sub(r'\([\w\s]*\)', '', s)
-    # while rs.find('(') >= 0:
-    #     rs = sub(r'\([\w\s]*\)', '', rs)
-    # return rs
 
 class MyTestCase(unittest.TestCase):
     def test_empty(self):
