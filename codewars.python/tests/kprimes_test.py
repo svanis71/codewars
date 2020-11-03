@@ -1,6 +1,6 @@
 import unittest
 
-from kprimes import kprimes, puzzle
+from kprimes import kprimes, puzzle, consec_kprimes
 
 
 class MyTestCase(unittest.TestCase):
@@ -19,6 +19,22 @@ class MyTestCase(unittest.TestCase):
     def test_puzzle(self):
         self.assertEqual(1, puzzle(138), "Test for puzzle(138)")
         self.assertEqual(2, puzzle(143), "Test for puzzle(143)")
+
+    def test_consec_kprimes(self):
+        tests = [(3, [10005, 10030, 10026, 10008, 10016, 10028, 10004], 4),
+                 (5, [10158, 10182, 10184, 10172, 10179, 10168, 10156, 10165, 10155, 10161, 10178,
+                      10170], 3),
+                 (7, [10110, 10102, 10097, 10113, 10123, 10109, 10118, 10119, 10117, 10115, 10101,
+                      10121, 10122], 2),
+                 (2, [10123, 10122, 10132, 10129, 10145, 10148, 10147, 10135, 10146, 10134], 2),
+                 (0, [10176, 10164], 6),
+                 (0, [10182, 10191, 10163, 10172, 10178, 10190, 10177, 10186, 10169, 10161, 10165,
+                      10181], 0)
+                 ]
+        for (expected, indata, k) in tests:
+            self.assertEqual(expected, consec_kprimes(k, indata),
+                             f'Expect {expected} {k}-primes in {indata}')
+
 
 if __name__ == '__main__':
     unittest.main()
