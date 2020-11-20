@@ -13,3 +13,12 @@ def puzzle(n):
     kp3 = kprimes(3, 0, n)
     kp7 = kprimes(7, 0, n)
     return sum([sum([len([p7 for p7 in kp7 if (p1 + p3 + p7) == n]) for p3 in kp3]) for p1 in kp1])
+
+def consec_kprimes(k, a):
+    b = a[1:]
+    cnt = 0
+    for n1,n2 in zip(a,b):
+        if is_kprime(k, n1) and is_kprime(k, n2):
+           cnt += 1
+    return cnt
+
