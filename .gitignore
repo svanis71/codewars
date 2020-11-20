@@ -17,4 +17,6 @@
 __pycache__/
 venv/
 node_modules/
+build/
+dist/
 
