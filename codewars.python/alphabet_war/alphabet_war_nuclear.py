@@ -1,12 +1,12 @@
 import re
 
 
-def alphabet_war(battlefield):
+def alphabet_war_nuclear(battlefield):
     if battlefield.find('#') < 0:
         return battlefield.replace('[', '').replace(']', '')
 
-    survivors = ''
     groups = [x for x in re.split(r'(\[?[a-z#]+\]?)', battlefield) if x != '']
+    survivors = ''
     bombs = 0
     for x in range(len(groups)):
         bombs += len(re.findall('#', groups[x]))

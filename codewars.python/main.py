@@ -1,5 +1,5 @@
+from alphabet_war.alphabet_war_wooloo import alphabet_war
 from parseInt import parse_int
-from alphabet_war_wooloo import alphabet_war
 
 
 def run():
