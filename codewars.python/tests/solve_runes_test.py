@@ -1,6 +1,6 @@
 import unittest
 
-from solve_runes import solve_runes
+from solve_runes import solve_runes, OP
 
 
 class MyTestCase(unittest.TestCase):
