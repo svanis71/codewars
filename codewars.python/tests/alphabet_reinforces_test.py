@@ -5,10 +5,12 @@ from alphabet_war import alphabet_war_reinforces
 
 class AlphabetReinforcesTest(unittest.TestCase):
     def test_1(self):
-        self.assertEqual(alphabet_war_reinforces(["abcdefg", "hijklmn"], ["   *   ", "*  *   "]), 'hi___fg');
+        actual = alphabet_war_reinforces(["abcdefg", "hijklmn"], ["   *   ", "*  *   "])
+        self.assertEqual(actual, 'hi___fg')
 
     def test_2(self):
-        self.assertEqual(alphabet_war_reinforces(["aaaaa", "bbbbb", "ccccc", "ddddd"], ["*", " *", "   "]), 'ccbaa');
+        actual = alphabet_war_reinforces(["aaaaa", "bbbbb", "ccccc", "ddddd"], ["*", " *", "   "])
+        self.assertEqual(actual, 'ccbaa')
 
     def test_3(self):
         reinforces = ["g964xxxxxxxx",
@@ -30,7 +32,8 @@ class AlphabetReinforcesTest(unittest.TestCase):
                       "**",
                       "*",
                       "*"]
-        self.assertEqual(alphabet_war_reinforces(reinforces, airstrikes), 'codewarsxxxx', 'Top 50 massacre failure');
+        actual = alphabet_war_reinforces(reinforces, airstrikes)
+        self.assertEqual(actual, 'codewarsxxxx', 'Top 50 massacre failure')
 
 
 if __name__ == '__main__':
