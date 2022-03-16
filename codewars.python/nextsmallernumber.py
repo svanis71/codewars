@@ -1,9 +1,8 @@
 import itertools
-import time
 
 
 def next_smaller(n):
-    digits = [x for x in str(n)]
+    digits = list(str(n))
     curr_min = n
     for i,c in enumerate(reversed(digits)):
         [int(''.join(x)) for x in itertools.permutations(digits, len(digits))]
