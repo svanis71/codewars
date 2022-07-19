@@ -3,7 +3,7 @@ import unittest
 from next_smaller import next_smaller
 
 
-class MyTestCase(unittest.TestCase):
+class NextSmallerTests(unittest.TestCase):
     @unittest.skip
     def test_next_smaller_1(self):
         self.assertEqual(-1, next_smaller(3))

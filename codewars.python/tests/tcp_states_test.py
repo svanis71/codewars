@@ -1,8 +1,9 @@
 import unittest
+
 from tcp_states import traverse_TCP_states
 
 
-class MyTestCase(unittest.TestCase):
+class TcpStatesTests(unittest.TestCase):
     def test_1(self):
         self.assertEqual(traverse_TCP_states(["APP_ACTIVE_OPEN", "RCV_SYN_ACK", "RCV_FIN"]), "CLOSE_WAIT")
 

@@ -3,7 +3,7 @@ import unittest
 from reverse_words import reverse_words
 
 
-class MyTestCase(unittest.TestCase):
+class ReverseWordsTests(unittest.TestCase):
     def test_something(self):
         self.assertEqual('olleH', reverse_words('Hello'))
 

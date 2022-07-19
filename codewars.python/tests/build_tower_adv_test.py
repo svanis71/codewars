@@ -3,7 +3,7 @@ import unittest
 from build_tower_adv import tower_builder
 
 
-class MyTestCase(unittest.TestCase):
+class BuildTowerAdvTests(unittest.TestCase):
     def test_simplest(self):
         self.assertEqual(tower_builder(1, (1, 1)), ['*', ])
 

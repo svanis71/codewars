@@ -3,7 +3,7 @@ import unittest
 from solve_runes import solve_runes, OP
 
 
-class MyTestCase(unittest.TestCase):
+class RunesTests(unittest.TestCase):
     def test_plus(self):
         self.assertEqual(2, OP['+'](1, 1))
 

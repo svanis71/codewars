@@ -1,7 +1,9 @@
 import unittest
+
 from digital_root import digital_root
 
-class MyTestCase(unittest.TestCase):
+
+class DigitalRootTests(unittest.TestCase):
     def testcase1(self):
         self.assertEqual(digital_root(16), 7)
 
@@ -13,6 +15,7 @@ class MyTestCase(unittest.TestCase):
 
     def testcase4(self):
         self.assertEqual(digital_root(493193), 2)
+
 
 if __name__ == '__main__':
     unittest.main()

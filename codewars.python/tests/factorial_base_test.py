@@ -3,7 +3,7 @@ import unittest
 from factorial_base import dec_2_fact_string, fact_string_2_dec
 
 
-class MyTestCase(unittest.TestCase):
+class FactorialBaseTests(unittest.TestCase):
     def test_something(self):
         self.assertEqual(dec_2_fact_string(463), "341010")
         self.assertEqual(dec_2_fact_string(2982), "4041000")

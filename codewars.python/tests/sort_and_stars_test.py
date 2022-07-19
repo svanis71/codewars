@@ -3,7 +3,7 @@ import unittest
 from sort_and_stars import two_sort
 
 
-class MyTestCase(unittest.TestCase):
+class SortAndStarsTests(unittest.TestCase):
     def test_something(self):
         self.assertEqual(two_sort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]),
                          'b***i***t***c***o***i***n')

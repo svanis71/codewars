@@ -1,8 +1,9 @@
 import unittest
+
 from hamming import hamming
 
 
-class MyTestCase(unittest.TestCase):
+class HammingTests(unittest.TestCase):
     def test_hamming1(self):
         self.assertEqual(hamming(1), 1, "hamming(1) should be 1")
 

@@ -3,7 +3,7 @@ import unittest
 from trumpness_detect import trump_detector
 
 
-class MyTestCase(unittest.TestCase):
+class TrumpnessTests(unittest.TestCase):
     def test_1(self):
         self.assertEqual(0, trump_detector("I will build a huge wall"), 'Zero trumpness')
 

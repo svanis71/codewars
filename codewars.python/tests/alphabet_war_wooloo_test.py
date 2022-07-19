@@ -3,7 +3,7 @@ import unittest
 from alphabet_war import alphabet_war_wooloo
 
 
-class Alphabet_Wooloo_test(unittest.TestCase):
+class AlphabetWoolooTests(unittest.TestCase):
     def test(self):
         self.assertEqual(alphabet_war_wooloo("z"), "Right side wins!")
         self.assertEqual(alphabet_war_wooloo("zm"), "Right side wins!")

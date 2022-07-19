@@ -3,7 +3,7 @@ import unittest
 from formula_1 import champion_rank
 
 
-class MyTestCase(unittest.TestCase):
+class FormulaOneTests(unittest.TestCase):
     def test_1(self):
         self.assertEqual(champion_rank(3, ""), 3)
         self.assertEqual(champion_rank(12, "4 O 3 O"), 12)

@@ -3,7 +3,7 @@ import unittest
 from how_sexy_is_your_name import sexy_name
 
 
-class MyTestCase(unittest.TestCase):
+class SexyNameTests(unittest.TestCase):
     def test_something(self):
         self.assertEqual(sexy_name('GUV'), 'NOT TOO SEXY')
         self.assertEqual(sexy_name('PHUG'), "NOT TOO SEXY")

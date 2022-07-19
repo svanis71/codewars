@@ -3,7 +3,7 @@ import unittest
 from remove_parentheses import remove_parentheses
 
 
-class MyTestCase(unittest.TestCase):
+class RemoveParenthesesTests(unittest.TestCase):
     def test_empty(self):
         self.assertEqual(remove_parentheses(''), '')
 

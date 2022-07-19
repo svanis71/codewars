@@ -3,7 +3,7 @@ import unittest
 from pyramid_kata import pyramid
 
 
-class MyTestCase(unittest.TestCase):
+class PyramidTests(unittest.TestCase):
     def test_something(self):
         self.assertEqual(pyramid(0), [])
         self.assertEqual(pyramid(1), [[1]])

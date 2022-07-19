@@ -17,7 +17,7 @@ def triangle(row):
     pass
 
 
-class MyTestCase(unittest.TestCase):
+class InsaneTriangleTest(unittest.TestCase):
     def _test(self, cases):
         for _in, _out in cases:
             self.assertEqual(triangle(_in), _out)

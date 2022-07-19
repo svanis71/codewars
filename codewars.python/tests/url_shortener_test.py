@@ -3,7 +3,7 @@ import unittest
 from url_shortener import Url_shortener
 
 
-class MyTestCase(unittest.TestCase):
+class UrlShortenerTests(unittest.TestCase):
 
     def test_something(self):
         us = Url_shortener()

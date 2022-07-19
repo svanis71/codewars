@@ -4,7 +4,7 @@ from unittest import TestCase
 from recursion_101 import solve
 
 
-class Test(TestCase):
+class RecursionTests(TestCase):
     @unittest.skip
     def test_solve1(self):
         self.assertEqual(solve(6, 19), [6, 7])

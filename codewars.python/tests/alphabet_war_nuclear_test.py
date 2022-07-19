@@ -3,7 +3,7 @@ import unittest
 from alphabet_war import alphabet_war_nuclear
 
 
-class MyTestCase(unittest.TestCase):
+class AlphabetWarNuclear(unittest.TestCase):
     def test_1(self):
         self.assertEqual(alphabet_war_nuclear('[a]#[b]#[c]'), 'ac')
 

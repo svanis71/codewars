@@ -1,10 +1,9 @@
 import unittest
-from time import time
 
 from nextsmallernumber import next_smaller
 
 
-class MyTestCase(unittest.TestCase):
+class NextSmallerNumberTests(unittest.TestCase):
     def test1(self):
         self.assertEqual(next_smaller(907), 790)
 

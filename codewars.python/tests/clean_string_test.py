@@ -3,7 +3,7 @@ import unittest
 from clean_string import clean_string
 
 
-class MyTestCase(unittest.TestCase):
+class CleanStringTests(unittest.TestCase):
     def test_something(self):
         tests = [
             ('abc#d##c', "ac"),

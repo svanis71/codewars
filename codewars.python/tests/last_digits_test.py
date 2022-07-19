@@ -3,7 +3,7 @@ import unittest
 from last_digits import solution
 
 
-class MyTestCase(unittest.TestCase):
+class LastDigitsTests(unittest.TestCase):
     def test_1(self):
         # ('Example tests')
         self.assertEqual(solution(1, 1), [1])

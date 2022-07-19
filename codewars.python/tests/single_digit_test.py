@@ -3,7 +3,7 @@ import unittest
 from single_digit import single_digit
 
 
-class MyTestCase(unittest.TestCase):
+class SingleDigitTests(unittest.TestCase):
     def test_something(self):
         self.assertEqual(single_digit(5665), 5)
 
