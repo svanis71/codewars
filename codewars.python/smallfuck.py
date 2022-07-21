@@ -41,7 +41,7 @@ def interpreter(code, tape):
                 bits[pointer] = ~bits[pointer] & 1
                 pc += 1
             case '[':
-                pc = pc + 1 if bits[pointer] == 1 else find_matching_close_bracket(code, pc)
+                pc = pc + 1 if bits[pointer] == 1 else find_matching_close_bracket(code, pc) + 1
             case ']':
                 pc = pc + 1 if bits[pointer] == 0 else find_matching_open_bracket(code, pc)
             case _:
