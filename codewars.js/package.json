@@ -4,15 +4,26 @@
   "description": "Codewars solutions in javascript",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "esbuild src/index.js --bundle --minify --outdir=dist",
+    "build:debug": "esbuild index.js --bundle --sourcemap --outdir=dist",
     "test": "jest --watch"
   },
   "author": "Me",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^27.1.0",
-    "webpack": "^5.51.2",
-    "webpack-cli": "^4.8.0"
+    "esbuild": "^0.14.49",
+    "esbuild-jest": "^0.5.0",
+    "jest": "^28.1.3"
   },
-  "jest": {}
+  "jest": {
+    "transform": {
+      "^.+\\.js?$": "esbuild-jest"
+    },
+    "clearMocks": true,
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "coverageProvider": "v8"
+  },
+  "dependencies": {
+  }
 }
