@@ -1,6 +1,6 @@
 import unittest
 
-from tick import interpreter
+from esolang_tick import interpreter
 
 
 class TickTests(unittest.TestCase):
