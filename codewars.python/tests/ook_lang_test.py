@@ -1,16 +1,8 @@
 import unittest
 
 
-def okkOokOo(code, facit=None):
-    letters = [s.strip() for s in code[0:-1].split('?')]
-    mess = ''
-    for i, letter in enumerate(letters):
-        if letter in TRANSLATIONS.keys():
-            mess += TRANSLATIONS[letter]
-            print(f'{letter} -> {facit[i]}')
-        else:
-            print(f'"{letter}": "",')
-    return mess
+def okkOokOo(code):
+    return ''.join([TRANSLATIONS[letter.strip()] for letter in code[0:-1].split('?')])
 
 
 TRANSLATIONS = {
@@ -83,10 +75,8 @@ class MyTestCase(unittest.TestCase):
             'Ok, Oooook?  Okk, Okkk, O?  Okk, Ok, Okk?  Okk, Ok, Ooo?  Ok, Okk, Ok?  Ok, Ookk, Ok?  Okk, Okkkk?  Okkk, Ook, O?  Okkk, Oooo?  Okk, Okkkk?  Okkk, Ook, O?  Okk, Ok, Okk!'))
 
     def test_sirterry(self):
-        facit = "AT LAST, SIR TERRY, WE MUST WALK TOGETHER"
-        self.assertEqual(facit, okkOokOo(
-            'Ok, Oooook?  Ok, Ok, Ok, Oo?  Ok, Ooooo?  Ok, Ookk, Oo?  Ok, Oooook?  Ok, Ok, Ookk?  Ok, Ok, Ok, Oo?  Ook, Okk, Oo?  Ok, Ooooo?  Ok, Ok, Ookk?  Ok, Ook, Ook?  Ok, Ok, Ook, O?  Ok, Ooooo?  Ok, Ok, Ok, Oo?  Ok, Oook, Ok?  Ok, Ok, Ook, O?  Ok, Ok, Ook, O?  Ok, Okk, Ook?  Ook, Okk, Oo?  Ok, Ooooo?  Ok, Ok, Okkk?  Ok, Oook, Ok?  Ok, Ooooo?  Ok, Ookk, Ok?  Ok, Ok, Ok, Ok?  Ok, Ok, Ookk?  Ok, Ok, Ok, Oo?  Ok, Ooooo?  Ok, Ok, Okkk?  Ok, Oooook?  Ok, Ookk, Oo?  Ok, Ook, Okk?  Ok, Ooooo?  Ok, Ok, Ok, Oo?  Ok, Ookkkk?  Ok, Oookkk?  Ok, Oook, Ok?  Ok, Ok, Ok, Oo?  Ok, Ook, Ooo?  Ok, Oook, Ok?  Ok, Ok, Ook, O!',
-            facit))
+        self.assertEqual("AT LAST, SIR TERRY, WE MUST WALK TOGETHER", okkOokOo(
+            'Ok, Oooook?  Ok, Ok, Ok, Oo?  Ok, Ooooo?  Ok, Ookk, Oo?  Ok, Oooook?  Ok, Ok, Ookk?  Ok, Ok, Ok, Oo?  Ook, Okk, Oo?  Ok, Ooooo?  Ok, Ok, Ookk?  Ok, Ook, Ook?  Ok, Ok, Ook, O?  Ok, Ooooo?  Ok, Ok, Ok, Oo?  Ok, Oook, Ok?  Ok, Ok, Ook, O?  Ok, Ok, Ook, O?  Ok, Okk, Ook?  Ook, Okk, Oo?  Ok, Ooooo?  Ok, Ok, Okkk?  Ok, Oook, Ok?  Ok, Ooooo?  Ok, Ookk, Ok?  Ok, Ok, Ok, Ok?  Ok, Ok, Ookk?  Ok, Ok, Ok, Oo?  Ok, Ooooo?  Ok, Ok, Okkk?  Ok, Oooook?  Ok, Ookk, Oo?  Ok, Ook, Okk?  Ok, Ooooo?  Ok, Ok, Ok, Oo?  Ok, Ookkkk?  Ok, Oookkk?  Ok, Oook, Ok?  Ok, Ok, Ok, Oo?  Ok, Ook, Ooo?  Ok, Oook, Ok?  Ok, Ok, Ook, O!'))
 
     def test_berilia(self):
         self.assertEqual("Berilia", okkOokOo('Ok, Ooook, O?  '
@@ -98,7 +88,7 @@ class MyTestCase(unittest.TestCase):
                                              'Okk, Ooook!'))
 
     def test_jeraken(self):
-        self.assertEqual("Jerkeen",
+        self.assertEqual("Jerakeen",
                          okkOokOo('Ok, Ook, Ok, O?  '
                                   'Okk, Ook, Ok?  '
                                   'Okkk, Ook, O?  '
