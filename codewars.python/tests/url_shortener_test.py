@@ -1,7 +1,23 @@
+import ctypes
 import unittest
+from textwrap import wrap
 
-from url_shortener import Url_shortener
 
+class Url_shortener:
+    def __init__(self):
+        self.shortlong = dict()
+
+    def shorten(self, long_url):
+        hashu = lambda word: ctypes.c_uint64(hash(word)).value
+        hashn = lambda word, N: (hashu(word) % (2 ** (N * 8))).to_bytes(N, "big").hex()
+        urlhash = hashn(long_url, 4)
+        short_url = ''.join([chr(97 + int(c, 16) % 26) for c in wrap(urlhash, 2)])
+        if short_url not in self.shortlong:
+            self.shortlong[short_url] = long_url
+        return 'short.ly/' + short_url
+
+    def redirect(self, short_url):
+        return self.shortlong[short_url[-4:]]
 
 class UrlShortenerTests(unittest.TestCase):
 
