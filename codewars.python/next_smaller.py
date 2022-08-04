@@ -1,16 +1,14 @@
-import itertools
-
-
 def next_smaller(n):
-    # digits = list(str(n))
-    # ordered = sorted(digits)
-    # exists_smaller = ''.join(ordered) < ''.join(digits) and ordered[0] != 0
-    # if n < 21 or not exists_smaller:
-    #     return -1
-    # for i in range(len(digits)):
+    digits = [int(c) for c in str(n)]
+    ordered = sorted(digits)
+    if n < 21 or digits == ordered:
+        return -1
+    # Börja från höger och hitta första siffran där vänster > höger
+    for idx, (left, right) in enumerate(zip(digits, digits[1:])):
+        if left > right:
+            pass
 
     return n
-
 
     # digits = [x for x in str(n)]
     # numbers = sorted(
