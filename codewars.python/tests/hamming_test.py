@@ -61,6 +61,8 @@ class HammingTests(unittest.TestCase):
     def test_hamming19(self):
         self.assertEqual(hamming(19), 32, "hamming(19) should be 32")
 
+    def test_hamming1999(self):
+        self.assertEqual(8053063680, hamming(1999))
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,27 +1,18 @@
-def test_hamming_candidate(n):
-    if n == 1:
-        return True
-    if n % 2 == 0:
-        return test_hamming_candidate(n / 2)
-    if n % 3 == 0:
-        return test_hamming_candidate(n / 3)
-    if n % 5 == 0:
-        return test_hamming_candidate(n / 5)
-    return False
+from heapq import heappush, heappop
+from itertools import islice
 
 
-def hamming_numbers():
-    n = 1
+# https://www.codewars.com/kata/526d84b98f428f14a60008da/python
+def generate_hamming_numbers():
+    heap = [1]
     while True:
-        if test_hamming_candidate(n):
-            yield n
-        n += 1
+        h = heappop(heap)
+        while heap and h == heap[0]:
+            heappop(heap)
+        for m in [2, 3, 5]:
+            heappush(heap, m * h)
+        yield h
 
 
 def hamming(n):
-    for i, x in enumerate(hamming_numbers()):
-        if i + 1 == n:
-            return x
-
-def h(n):
-    pass
+    return list(islice(generate_hamming_numbers(), n))[-1]
