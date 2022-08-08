@@ -9,7 +9,6 @@
 /Codewars/bin/Debug
 obj
 bin
-.vscode
 *.suo
 .idea
 .pyc
