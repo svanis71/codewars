@@ -1,6 +1,6 @@
 import unittest
 
-from woodcut import wood_cut
+from kyu5.woodcut import wood_cut
 
 
 class WoodCutTests(unittest.TestCase):

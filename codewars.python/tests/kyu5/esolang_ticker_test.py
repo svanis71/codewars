@@ -1,7 +1,7 @@
 import unittest
 
 # https://www.codewars.com/kata/5876e24130b45aaa0c00001d/train/python
-from esolang_ticker import interpreter
+from kyu5.esolang_ticker import interpreter
 
 
 class TickerTests(unittest.TestCase):
