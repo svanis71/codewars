@@ -1,6 +1,6 @@
 import unittest
 
-from largest_sum import largest_sum
+from kyu5.largest_sum import largest_sum
 
 
 class MyTestCase(unittest.TestCase):
