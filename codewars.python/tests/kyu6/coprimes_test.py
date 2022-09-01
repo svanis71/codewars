@@ -1,6 +1,6 @@
 import unittest
 
-from coprimes import coprimes
+from kyu6.coprimes import coprimes
 
 
 class CoprimesTests(unittest.TestCase):
