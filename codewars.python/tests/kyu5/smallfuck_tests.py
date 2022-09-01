@@ -1,6 +1,6 @@
 import unittest
 
-from smallfuck import interpreter
+from kyu5.smallfuck import interpreter
 
 
 class SmallFuckTests(unittest.TestCase):
