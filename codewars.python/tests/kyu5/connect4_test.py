@@ -70,7 +70,7 @@ class TestConnect4(TestCase):
         self.assertEqual(game.play(0), "Player 1 wins!")
 
 
-    def test_diagonal_right(self):
+    def test_diagonal_right_again(self):
         game = Connect4()
         game.play(0)
         game.play(6)

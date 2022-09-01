@@ -1,6 +1,6 @@
 import unittest
 
-from alphabet_war import alphabet_war_nuclear
+from kyu5.alphabet_war_nuclear import alphabet_war_nuclear
 
 
 class AlphabetWarNuclear(unittest.TestCase):

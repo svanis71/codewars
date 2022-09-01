@@ -1,6 +1,6 @@
 import unittest
 
-from alphabet_war import alphabet_war_wooloo
+from kyu5.alphabet_war_wooloo import alphabet_war_wooloo
 
 
 class AlphabetWoolooTests(unittest.TestCase):

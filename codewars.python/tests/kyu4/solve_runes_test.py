@@ -1,6 +1,6 @@
 import unittest
 
-from solve_runes import solve_runes, OP
+from kyu4.solve_runes import solve_runes, OP
 
 
 class RunesTests(unittest.TestCase):
