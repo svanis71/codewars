@@ -1,7 +1,7 @@
 import unittest
 from unittest import TestCase
 
-from connect4 import Connect4
+from kyu5.connect4 import Connect4
 
 
 class TestConnect4(TestCase):
