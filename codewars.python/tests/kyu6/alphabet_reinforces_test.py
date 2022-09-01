@@ -1,6 +1,6 @@
 import unittest
 
-from alphabet_war import alphabet_war_reinforces
+from kyu6.alphabet_war_reinforces import alphabet_war_reinforces
 
 
 class AlphabetReinforcesTest(unittest.TestCase):

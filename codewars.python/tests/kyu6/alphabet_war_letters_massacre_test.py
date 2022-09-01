@@ -1,6 +1,6 @@
 import unittest
 
-from alphabet_war import alphabet_war_letters_massacre
+from kyu6.alphabet_war_letters_massacre import alphabet_war_letters_massacre
 
 
 class AlphabetWarLettersTests(unittest.TestCase):
