@@ -1,19 +1,18 @@
-# https://www.codewars.com/kata/parseint-reloaded/train/python
 import re
 
 
 class TreeNode:
-    def __init__(self, value):
+    def __init__(self, value: int):
         self.value = value
         self.left = None
         self.right = None
 
 
-def find_right_end(nod):
+def find_right_end(nod: TreeNode):
     return nod if not nod.right else find_right_end(nod.right)
 
 
-def add_node(tree, pnod):
+def add_node(tree: TreeNode, pnod: TreeNode):
     nod = find_right_end(tree)
     if pnod.value >= 100:
         while nod.left:
@@ -23,16 +22,21 @@ def add_node(tree, pnod):
         nod.right = pnod
 
 
-def parse_int(s):
+def parse_int(s: str) -> int:
+    '''
+        https://www.codewars.com/kata/parseint-reloaded/train/python
+    :param s: Number as string
+    :return: Number as int
+    '''
     numbers = {'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8,
                'nine': 9,
                'ten': 10, 'eleven': 11, 'twelve': 12, 'thirteen': 13, 'fourteen': 14, 'fifteen': 15, 'sixteen': 16,
                'seventeen': 17, 'eighteen': 18, 'nineteen': 19, 'hundred': 100, 'thousand': 1000, 'million': 1000000,
-                'twenty': 20, 'thirty': 30, 'forty': 40, 'fifty': 50, 'sixty': 60, 'seventy': 70, 'eighty': 80,
-                'ninety': 90}
+               'twenty': 20, 'thirty': 30, 'forty': 40, 'fifty': 50, 'sixty': 60, 'seventy': 70, 'eighty': 80,
+               'ninety': 90}
 
     sm = re.sub(r'\s+and\s+', ' ', s)
-    sm = re.sub(r'(?:-$)|(?:-\s+)', '', sm).split(' ')
+    sm = re.sub(r'(-\s+)', '', sm).split(' ')
     tree = None
 
     for d in sm:

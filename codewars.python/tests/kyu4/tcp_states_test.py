@@ -1,6 +1,6 @@
 import unittest
 
-from tcp_states import traverse_TCP_states
+from kyu4.tcp_states import traverse_TCP_states
 
 
 class TcpStatesTests(unittest.TestCase):

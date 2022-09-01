@@ -1,6 +1,6 @@
 import unittest
 
-from paintfuck import interpreter
+from kyu4.paintfuck import interpreter
 
 
 class PaintFuckTests(unittest.TestCase):

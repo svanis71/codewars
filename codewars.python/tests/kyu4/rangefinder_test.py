@@ -1,6 +1,6 @@
 import unittest
 
-from rangefinder import rangefinder
+from kyu4.rangefinder import rangefinder
 
 
 class RangeFinderTests(unittest.TestCase):

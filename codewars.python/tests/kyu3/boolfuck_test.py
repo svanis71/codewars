@@ -1,6 +1,6 @@
 import unittest
 
-from boolfuck import boolfuck
+from kyu3.boolfuck import boolfuck
 
 """
 https://www.codewars.com/kata/5861487fdb20cff3ab000030/train/python

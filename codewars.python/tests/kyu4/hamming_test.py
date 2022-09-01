@@ -1,6 +1,6 @@
 import unittest
 
-from hamming import hamming
+from kyu4.hamming import hamming
 
 
 class HammingTests(unittest.TestCase):

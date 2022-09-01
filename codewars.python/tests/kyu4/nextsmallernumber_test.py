@@ -1,6 +1,6 @@
 import unittest
 
-from nextsmallernumber import next_smaller
+from kyu4.nextsmallernumber import next_smaller
 
 
 class NextSmallerTests(unittest.TestCase):
