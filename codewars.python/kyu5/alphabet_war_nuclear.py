@@ -5,7 +5,7 @@ def alphabet_war_nuclear(battlefield):
     if battlefield.find('#') < 0:
         return battlefield.replace('[', '').replace(']', '')
 
-    groups = [x for x in re.split(r'(\[?[a-z#]+\]?)', battlefield) if x != '']
+    groups = [x for x in re.split(r'(\[?[a-z#]+]?)', battlefield) if x != '']
     survivors = ''
     bombs = 0
     for x in range(len(groups)):

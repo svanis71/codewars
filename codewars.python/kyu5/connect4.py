@@ -1,6 +1,6 @@
 class Connect4:
     def __init__(self):
-        self.board = [[0 for col in range(7)] for row in range(6)]
+        self.board = [[0 for _ in range(7)] for _ in range(6)]
         self.currentPlayer = 2
         self.gameOver = False
 
@@ -23,7 +23,7 @@ class Connect4:
                     str_row.find('1111') >= 0 or str_row.find('2222') >= 0]) > 0
 
     def checkVertical(self):
-        return len([True for vert in [''.join([str(x[col]) for x in (self.board)]) for col in range(7)] if
+        return len([True for vert in [''.join([str(x[col]) for x in self.board]) for col in range(7)] if
                     vert.find('1111') >= 0 or vert.find('2222') >= 0]) > 0
 
     def check_diagonal(self):

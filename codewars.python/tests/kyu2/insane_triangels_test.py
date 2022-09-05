@@ -2,9 +2,9 @@ import unittest
 
 from kyu2.insane_triangels import triangle
 
-'''
+"""
 https://www.codewars.com/kata/5a331ea7ee1aae8f24000175/train/python
-'''
+"""
 
 
 class InsaneTriangleTest(unittest.TestCase):

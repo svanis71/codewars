@@ -14,5 +14,6 @@ class TrianglePerimeterTests(unittest.TestCase):
             Triangle(Point(15, -10), Point(40, 20), Point(20, 50))
         ), 6))
 
+
 if __name__ == '__main__':
     unittest.main()

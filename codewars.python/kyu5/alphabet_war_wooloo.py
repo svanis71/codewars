@@ -12,8 +12,8 @@ def is_opponent(priest, letter):
     return letter in rights
 
 
-def is_between_priests(prev, next):
-    return is_priest(prev) and is_priest(next) and prev != next
+def is_between_priests(prev_p, next_p):
+    return is_priest(prev_p) and is_priest(next_p) and prev_p != next_p
 
 
 def alphabet_war_wooloo(fight):
@@ -28,9 +28,9 @@ def alphabet_war_wooloo(fight):
         if letter in 'jt':
             continue
         prev = fight[i - 1 if i > 0 else 0]
-        next = fight[i + 1:i + 2]
-        if not is_between_priests(prev, next) and ((is_priest(prev) and is_opponent(prev, letter)) or (
-                is_priest(next) and is_opponent(next, letter))):
+        next_p = fight[i + 1:i + 2]
+        if not is_between_priests(prev, next_p) and ((is_priest(prev) and is_opponent(prev, letter)) or (
+                is_priest(next_p) and is_opponent(next_p, letter))):
             target = target[0:i] + wooloo[letter] + target[i + 1:]
 
     score_right = sum([4 - rights.find(x) for x in target if x in rights])

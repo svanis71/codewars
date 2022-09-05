@@ -10,7 +10,7 @@ def next_smaller(n):
         first_smallest_pos -= 1
 
     for i in range(first_smallest_pos, len(digits)):
-        if digits[i] < digits[first_smallest_pos] and digits[i] > next_smallest:
+        if digits[first_smallest_pos] > digits[i] > next_smallest:
             next_smallest = digits[i]
             next_smallest_pos = i
 

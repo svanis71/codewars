@@ -1,5 +1,5 @@
 def tops(msg):
-    '''
+    """
     https://www.codewars.com/kata/59b7571bbf10a48c75000070/python
 
                                                           3
@@ -15,7 +15,7 @@ def tops(msg):
 
     :param msg: Input string
     :return: tops in reverse order
-    '''
+    """
     top, gap, letters = 1, 5, ''
     while top < len(msg):
         letters += msg[top]

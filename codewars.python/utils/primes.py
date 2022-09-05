@@ -24,11 +24,11 @@ def get_next_prime(n):
         raise ValueError(f'{n} is not a prime')
 
     isPrime = False
-    next = n + 2
+    next_num = n + 2
     while not isPrime:
-        isPrime = is_prime(next)
-        next = next if isPrime else next + 2
-    return next
+        isPrime = is_prime(next_num)
+        next_num = next_num if isPrime else next_num + 2
+    return next_num
 
 
 def prime_factors(n):

@@ -21,11 +21,12 @@ class TrumpnessTests(unittest.TestCase):
                          'Trumpness factor 1,56')
 
     def test_7(self):
-        self.assertEqual(0.89, trump_detector('I kiiiid you not! Buuiild: traadiiiiition I AM TELLING THE TRUTH MIGRANTS. I haaaaaveeeee long fingers, HUGE truuump, GO HOME, baaaad foooreigners!!! Faaamiily I HAVE LONG FINGERS succeeess, MIGRANTS!!!!!!1!! Ameeeeriiica faamiiiiily nauuughty countries!!! Truuump uuniversity preeeeetty wiiife. Boombs, GOOD AMERICANS NUKE boordeeeer!!! Booooordeeeeer: preeeeetty wiife... Buuuiild!!! Eeeeexceeeellent sons pretty wiiife BUILD... Goo hoooome: I kiid yooooou not, I knoow iit!!!!!!!1!!'))
+        self.assertEqual(0.89, trump_detector(
+            'I kiiiid you not! Buuiild: traadiiiiition I AM TELLING THE TRUTH MIGRANTS. I haaaaaveeeee long fingers, HUGE truuump, GO HOME, baaaad foooreigners!!! Faaamiily I HAVE LONG FINGERS succeeess, MIGRANTS!!!!!!1!! Ameeeeriiica faamiiiiily nauuughty countries!!! Truuump uuniversity preeeeetty wiiife. Boombs, GOOD AMERICANS NUKE boordeeeer!!! Booooordeeeeer: preeeeetty wiife... Buuuiild!!! Eeeeexceeeellent sons pretty wiiife BUILD... Goo hoooome: I kiid yooooou not, I knoow iit!!!!!!!1!!'))
 
     def test_8(self):
-        self.assertEqual(0.87, trump_detector('I AM TELLING THE TRUTH BOOOOOMBS: nuuuuuukeee, mexiiicans... MIGRANTS... Truuuuump!?! HUGE. I aaam teelling the truth!!!?!?!?!?!'))
-
+        self.assertEqual(0.87, trump_detector(
+            'I AM TELLING THE TRUTH BOOOOOMBS: nuuuuuukeee, mexiiicans... MIGRANTS... Truuuuump!?! HUGE. I aaam teelling the truth!!!?!?!?!?!'))
 
 
 if __name__ == '__main__':

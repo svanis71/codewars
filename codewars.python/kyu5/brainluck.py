@@ -1,20 +1,20 @@
 from collections import defaultdict
 
 
-def brain_luck(code: str, input: str) -> str:
-    '''
+def brain_luck(code: str, input_str: str) -> str:
+    """
     https://www.codewars.com/kata/526156943dfe7ce06200063e/train/python
 
 
     :param code: the program code, a string with the sequence of machine instructions
-    :param input: the program input, a string, possibly empty, that will be interpreted as an array of bytes using each character's ASCII code and will be consumed by the instruction
+    :param input_str: the program input, a string, possibly empty, that will be interpreted as an array of bytes using each character's ASCII code and will be consumed by the instruction
     :return: the output of the interpreted code (always as a string), produced by the instruction
-    '''
+    """
     out_stream = ""
     tape = defaultdict(int)
     tape_ptr = 0
     pc = 0
-    input_bytes = [ord(c) for c in input]
+    input_bytes = [ord(c) for c in input_str]
     pgm_len = len(code)
 
     while pc < pgm_len:

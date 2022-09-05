@@ -23,11 +23,11 @@ def add_node(tree: TreeNode, pnod: TreeNode):
 
 
 def parse_int(s: str) -> int:
-    '''
+    """
         https://www.codewars.com/kata/parseint-reloaded/train/python
     :param s: Number as string
     :return: Number as int
-    '''
+    """
     numbers = {'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8,
                'nine': 9,
                'ten': 10, 'eleven': 11, 'twelve': 12, 'thirteen': 13, 'fourteen': 14, 'fifteen': 15, 'sixteen': 16,
@@ -49,15 +49,15 @@ def parse_int(s: str) -> int:
         else:
             add_node(tree, nod)
 
-    sum, tmp, nod = 0, 0, tree
+    running_sum, tmp, nod = 0, 0, tree
     while nod:
         tmp += nod.value
         leftn = nod.left
         while leftn:
             tmp = tmp * leftn.value
             if leftn.value == 1000:
-                sum = sum + tmp
+                running_sum = running_sum + tmp
                 tmp = 0
             leftn = leftn.left
         nod = nod.right
-    return sum + tmp
+    return running_sum + tmp

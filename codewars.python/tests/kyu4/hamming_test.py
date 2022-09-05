@@ -67,5 +67,6 @@ class HammingTests(unittest.TestCase):
     def test_hamming5000(self):
         self.assertEqual(50837316566580, hamming(5000))
 
+
 if __name__ == '__main__':
     unittest.main()

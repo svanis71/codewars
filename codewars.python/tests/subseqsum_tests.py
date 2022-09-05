@@ -3,13 +3,13 @@ from collections import defaultdict
 
 
 def subsequence_sums(arr, s):
-    '''
+    """
     https://www.codewars.com/kata/60df63c6ce1e7b0023d4af5c/train/python
 
     :param arr: array of ints -10000 <= x <= 10000
     :param s: Value to test against
     :return: Number of subsequences that sums to testval
-    '''
+    """
 
     map = defaultdict(list)
     running_sum = 0

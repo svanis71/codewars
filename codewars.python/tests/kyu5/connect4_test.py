@@ -69,7 +69,6 @@ class TestConnect4(TestCase):
         game.play(4)
         self.assertEqual(game.play(0), "Player 1 wins!")
 
-
     def test_diagonal_right_again(self):
         game = Connect4()
         game.play(0)
@@ -97,6 +96,7 @@ class TestConnect4(TestCase):
         game.play(6)
         game.play(1)
         self.assertEqual(game.play(6), "Player 2 wins!")
+
 
 if __name__ == '__main__':
     unittest.main()

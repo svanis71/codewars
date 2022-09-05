@@ -3,14 +3,19 @@ import unittest
 from textwrap import wrap
 
 
-class Url_shortener:
+class UrlShortener:
     def __init__(self):
         self.shortlong = dict()
 
+    @staticmethod
+    def hashu(word):
+        return ctypes.c_uint64(hash(word)).value
+
+    def hashn(self, word, number_of_bytes):
+        return (self.hashu(word) % (2 ** (number_of_bytes * 8))).to_bytes(number_of_bytes, "big").hex()
+
     def shorten(self, long_url):
-        hashu = lambda word: ctypes.c_uint64(hash(word)).value
-        hashn = lambda word, N: (hashu(word) % (2 ** (N * 8))).to_bytes(N, "big").hex()
-        urlhash = hashn(long_url, 4)
+        urlhash = self.hashn(long_url, 4)
         short_url = ''.join([chr(97 + int(c, 16) % 26) for c in wrap(urlhash, 2)])
         if short_url not in self.shortlong:
             self.shortlong[short_url] = long_url
@@ -19,10 +24,12 @@ class Url_shortener:
     def redirect(self, short_url):
         return self.shortlong[short_url[-4:]]
 
+
 class UrlShortenerTests(unittest.TestCase):
 
-    def test_something(self):
-        us = Url_shortener()
+    @staticmethod
+    def test_something():
+        us = UrlShortener()
         print(us.shorten('http://foo.se/search'))
         print(us.shorten('http://foo.se/search'))
         print(us.shorten('http://foo.se/search?q=apa'))
