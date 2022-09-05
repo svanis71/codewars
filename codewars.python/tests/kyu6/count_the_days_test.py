@@ -6,10 +6,10 @@ from kyu6.count_the_days import count_days
 
 
 def get_today():
-    '''
+    """
     Mock today
     :return:
-    '''
+    """
     return datetime(2022, 9, 5, 8, 11, 17, 178759)
 
 

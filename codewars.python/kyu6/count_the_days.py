@@ -6,12 +6,12 @@ def get_today():
 
 
 def count_days(d: datetime) -> str:
-    '''
+    """
     https://www.codewars.com/kata/5837fd7d44ff282acd000157/python
     # of days should be rounded
     :param d: A date
     :return: Number of days to d
-    '''
+    """
     delta = d - get_today()
     days_left = delta.days + round(delta.seconds / 3600 / 24)
     if delta.days == 0:
