@@ -26,4 +26,4 @@ class SnakesLadders:
         if die1 != die2:
             self.activePlayer = 3 - self.activePlayer
             self.players_positions.append(self.players_positions.pop(0))
-        return "Player %d Wins!" % player if next_pos == 100 else "Player %d is on square %d" % (player, next_pos)
+        return f"Player {player} Wins!" if next_pos == 100 else f"Player {player} is on square {next_pos}"

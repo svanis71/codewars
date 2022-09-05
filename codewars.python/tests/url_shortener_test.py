@@ -5,7 +5,7 @@ from textwrap import wrap
 
 class UrlShortener:
     def __init__(self):
-        self.shortlong = dict()
+        self.shortlong = {}
 
     @staticmethod
     def hashu(word):

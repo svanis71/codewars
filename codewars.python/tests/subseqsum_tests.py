@@ -1,5 +1,4 @@
 import unittest
-from collections import defaultdict
 
 
 def subsequence_sums(arr, s):
@@ -11,13 +10,13 @@ def subsequence_sums(arr, s):
     :return: Number of subsequences that sums to testval
     """
 
-    map = defaultdict(list)
+    # map = defaultdict(list)
     running_sum = 0
-    sliding_sum = 0
+    # sliding_sum = 0
     cnt = 0
     for v in arr:
         running_sum += v
-        if v == s or running_sum == s:
+        if s in (v, running_sum):
             cnt += 1
             
     # map = {}
