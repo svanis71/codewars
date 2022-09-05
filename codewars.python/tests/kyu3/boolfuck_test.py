@@ -2,12 +2,12 @@ import unittest
 
 from kyu3.boolfuck import boolfuck
 
-"""
-https://www.codewars.com/kata/5861487fdb20cff3ab000030/train/python
-"""
-
 
 class BoolfuckTests(unittest.TestCase):
+    """
+    https://www.codewars.com/kata/5861487fdb20cff3ab000030/train/python
+    """
+
     def test_boolfuck_1(self):
         self.assertEqual(boolfuck("", ""), "")
 

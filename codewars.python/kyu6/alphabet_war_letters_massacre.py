@@ -9,8 +9,8 @@ def alphabet_war_letters_massacre(fight):
     """
     lefts, rights = ('wpbs', 'mqdz')
     fight = re.sub(r'[a-z]?\*[a-z]?', '', fight)
-    points_right = sum([4 - rights.find(x) for x in fight if x in rights])
-    points_left = sum([4 - lefts.find(x) for x in fight if x in lefts])
+    points_right = sum(4 - rights.find(x) for x in fight if x in rights)
+    points_left = sum(4 - lefts.find(x) for x in fight if x in lefts)
 
     if points_right == points_left:
         return 'Let\'s fight again!'

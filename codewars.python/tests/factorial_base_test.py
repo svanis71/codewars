@@ -8,7 +8,7 @@ class FactorialBaseTests(unittest.TestCase):
         self.assertEqual(dec_2_fact_string(463), "341010")
         self.assertEqual(dec_2_fact_string(2982), "4041000")
 
-    def fact_2_dec(self):
+    def test_fact_2_dec(self):
         self.assertEqual(fact_string_2_dec("341010"), 463)
         self.assertEqual(fact_string_2_dec("4042100"), 2990)
 

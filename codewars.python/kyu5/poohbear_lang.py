@@ -48,7 +48,6 @@ class Program:
             self.output += self.instruction_set_output[instr](self.cells[self.cell_ptr])
         if instr in self.instruction_set_copy_paste:
             self.cells[self.cell_ptr] = self.instruction_set_copy_paste[instr](self.cells[self.cell_ptr], self.copy_buf)
-        return
 
     def loop(self, code: str, pc: int) -> int:
         loop_end = code.find('E', pc)
@@ -59,7 +58,6 @@ class Program:
         return loop_end
 
     def _interpret(self, pgm: str) -> str:
-        pgm = pgm
         pgm_len = len(pgm)
         pc = 0
         while pc < pgm_len:

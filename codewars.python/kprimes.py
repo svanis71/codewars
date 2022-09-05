@@ -13,7 +13,7 @@ def puzzle(n):
     kp1 = generate_primes_to(n)
     kp3 = kprimes(3, 0, n)
     kp7 = kprimes(7, 0, n)
-    return sum([sum([len([p7 for p7 in kp7 if (p1 + p3 + p7) == n]) for p3 in kp3]) for p1 in kp1])
+    return sum(sum(len([p7 for p7 in kp7 if (p1 + p3 + p7) == n]) for p3 in kp3) for p1 in kp1)
 
 
 def consec_kprimes(k, a):

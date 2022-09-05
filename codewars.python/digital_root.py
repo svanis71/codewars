@@ -5,4 +5,4 @@ def digital_root(num: int) -> int:
     :param num A number
     :return The digital root
     """
-    return num if num < 10 else digital_root(sum([int(i) for i in str(num)]))
+    return num if num < 10 else digital_root(sum(int(i) for i in str(num)))

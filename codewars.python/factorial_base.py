@@ -14,4 +14,4 @@ def dec_2_fact_string(nb):
 
 
 def fact_string_2_dec(s):
-    return sum([int(c if ord(c) < 65 else ord(c) - 55) * factorial(i) for i, c in enumerate(s[::-1])])
+    return sum(int(c if ord(c) < 65 else ord(c) - 55) * factorial(i) for i, c in enumerate(s[::-1]))

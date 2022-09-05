@@ -18,11 +18,8 @@ class PrimesTests(unittest.TestCase):
             self.assertEqual(n, get_next_prime(c), f'get_next_prime({c}) should be {n}')
 
     def test_next_prime_no_prime(self):
-        try:
+        with self.assertRaises(ValueError):
             get_next_prime(4)
-            self.assertTrue(False, 'Exception should be raised')
-        except ValueError:
-            self.assertTrue(True)
 
     def test_prime_factors_8(self):
         self.assertEqual([2, 2, 2], prime_factors(8))

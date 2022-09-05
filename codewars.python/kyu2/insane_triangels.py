@@ -25,7 +25,7 @@ def n_over_k_mod3(n, k):
         # 'Ad hoc' computation of C(n3, k3):
         if k3 > n3:
             return 0  # Return immediately if a factor is zero.
-        if k3 != n3 and k3 != 0:
+        if k3 not in (n3, 0):
             result = (result * 2) % 3
         n = n // 3
         k = k // 3

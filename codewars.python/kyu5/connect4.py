@@ -8,21 +8,21 @@ class Connect4:
         if self.gameOver:
             return 'Game has finished!'
 
-        free_rows = [freeidx for freeidx in [idx for idx, row in enumerate(self.board) if row[col] == 0]]
+        free_rows = list(idx for idx, row in enumerate(self.board) if row[col] == 0)
         if len(free_rows) == 0:
             return "Column full!"
 
         self.currentPlayer = 3 - self.currentPlayer
         self.board[max(free_rows)][col] = self.currentPlayer
-        self.gameOver = self.hasWinner()
+        self.gameOver = self.has_winner()
 
-        return 'Player %d %s' % (self.currentPlayer, 'has a turn' if not self.gameOver else 'wins!')
+        return f'Player {self.currentPlayer} {"has a turn" if not self.gameOver else "wins!"}'
 
-    def checkHorizontal(self):
+    def check_horizontal(self):
         return len([True for str_row in [''.join([str(c) for c in row]) for row in self.board] if
                     str_row.find('1111') >= 0 or str_row.find('2222') >= 0]) > 0
 
-    def checkVertical(self):
+    def check_vertical(self):
         return len([True for vert in [''.join([str(x[col]) for x in self.board]) for col in range(7)] if
                     vert.find('1111') >= 0 or vert.find('2222') >= 0]) > 0
 
@@ -47,5 +47,5 @@ class Connect4:
                     return True
         return False
 
-    def hasWinner(self):
-        return self.checkHorizontal() or self.checkVertical() or self.check_diagonal()
+    def has_winner(self):
+        return self.check_horizontal() or self.check_vertical() or self.check_diagonal()
