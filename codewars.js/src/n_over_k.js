@@ -1,7 +1,6 @@
-const fact = require('./factorial');
+import { fact } from './factorial';
 
-function n_over_k(n, k) {
+export function n_over_k(n, k) {
   return fact(n) / (fact(k) * fact(n - k));
 }
 
-module.exports = n_over_k;

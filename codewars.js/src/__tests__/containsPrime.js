@@ -1,4 +1,4 @@
-const isPrime = require('../containsPrime');
+import { isPrime } from '../containsPrime';
 
 test('optimusprime should return true', () => {
   expect(isPrime('optimusprime')).toBeTruthy();

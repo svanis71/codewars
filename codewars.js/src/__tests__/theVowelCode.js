@@ -1,5 +1,4 @@
-const encode = require('../theVowelCode').encode;
-const decode = require('../theVowelCode').decode;
+import { encode, decode } from '../theVowelCode';
 
 test('encode hello', () => {
   expect(encode('hello')).toBe('h2ll4');

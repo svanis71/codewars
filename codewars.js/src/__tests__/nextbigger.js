@@ -1,4 +1,4 @@
-const nextBigger = require('../nextbigger');
+import { nextBigger } from '../nextbigger';
 
 test('12', () => {
   expect(nextBigger(12)).toEqual(21);

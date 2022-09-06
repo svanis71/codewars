@@ -1,4 +1,4 @@
-const decodeResistorColors = require('../decodeResistorColors');
+import { decodeResistorColors } from '../decodeResistorColors';
 
 test('A resistor under 1000 ohms and with only three bands', () => {
   expect(decodeResistorColors('yellow violet black')).toEqual('47 ohms, 20%');

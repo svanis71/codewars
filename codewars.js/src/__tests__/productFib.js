@@ -1,4 +1,4 @@
-const productFib = require('../productFib');
+import { productFib } from '../productFib';
 
 test('4895', () => {
   expect(productFib(4895)).toEqual([55, 89, true]);

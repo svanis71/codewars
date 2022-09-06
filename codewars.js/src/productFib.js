@@ -1,6 +1,6 @@
-function productFib(prod) {
-  var fibNr1 = 0;
-  var fibNr2 = 1;
+export function productFib(prod) {
+  let fibNr1 = 0;
+  let fibNr2 = 1;
   while (fibNr1 * fibNr2 < prod) {
     var next = fibNr1 + fibNr2;
     fibNr1 = fibNr2;
@@ -9,4 +9,3 @@ function productFib(prod) {
   return [fibNr1, fibNr2, fibNr1 * fibNr2 == prod];
 }
 
-module.exports = productFib;

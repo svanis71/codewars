@@ -1,4 +1,4 @@
-const solve = require('../longestVowelChain');
+import { solve } from '../longestVowelChain';
 
 test('codewarriors should return 2', () => {
   expect(solve('codewarriors')).toBe(2);

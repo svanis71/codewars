@@ -1,6 +1,6 @@
-const n_over_k = require('./n_over_k');
+import { n_over_k } from './n_over_k';
 
-function pascalsTriangle(n) {
+export function pascalsTriangle(n) {
   //return a flat array representing the values of Pascal's Triangle to the n-th level
   var triangle = [];
   for (var level = 0; level < n; level++) {
@@ -12,4 +12,3 @@ function pascalsTriangle(n) {
   return triangle;
 }
 
-module.exports = pascalsTriangle;

@@ -1,4 +1,4 @@
-require('../base64');
+import { toBase64, fromBase64 } from '../base64';
 
 var tests = [
   ['this is a string!!', 'dGhpcyBpcyBhIHN0cmluZyEh'],
@@ -23,13 +23,19 @@ var tests = [
   ],
   ['TVRJek5EVTJOemc1TUNBZyAg', 'VFZSSmVrNUVWVEpPZW1jMVRVTkJaeUFn'],
 ];
+describe('Convert to and from Base64', () => {
+  beforeEach(() => {
+    String.prototype.toBase64 = toBase64;
+    String.prototype.fromBase64 = fromBase64;
+  });
 
-test('Test toBase64', () => {
-  tests.forEach((testStr) => expect(testStr[0].toBase64()).toEqual(testStr[1]));
-});
-
-test('Test fromBase64', () => {
-  tests.forEach((testStr) =>
-    expect(testStr[1].fromBase64()).toEqual(testStr[0]),
-  );
+  test('Test toBase64', () => {
+    tests.forEach((testStr) => expect(testStr[0].toBase64()).toEqual(testStr[1]));
+  });
+  
+  test('Test fromBase64', () => {
+    tests.forEach((testStr) =>
+      expect(testStr[1].fromBase64()).toEqual(testStr[0]),
+    );
+  });
 });

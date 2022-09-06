@@ -1,4 +1,4 @@
-const PrimeFactorizer = require('../primefactorizer').PrimeFactorizer;
+import { PrimeFactorizer } from '../primefactorizer';
 
 test('', () => {
   expect(new PrimeFactorizer(13).factor).toEqual({ 13: 1 });

@@ -1,4 +1,4 @@
-const sq = require('../sq');
+import { sq } from '../sq';
 
 test('Must be less than 40 chars', () => {
   expect(sq.toString().length + 3).toBeLessThan(40);

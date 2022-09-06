@@ -1,4 +1,4 @@
-const pascalsTriangle = require('../pascalsTriangle');
+import { pascalsTriangle } from '../pascalsTriangle';
 
 test('1 level triangle incorrect', () => {
   expect(pascalsTriangle(1).toString()).toEqual([1].toString());

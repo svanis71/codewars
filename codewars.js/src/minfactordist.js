@@ -10,4 +10,4 @@ export const minDistance = (n) => {
     }
     factors.sort((a,b)=>b-a);
     return factors.reduce((p, c, idx, factors) => idx<factors.length-1?(c-factors[idx+1]>p?p:c-factors[idx+1]):p, n);
-}
+};

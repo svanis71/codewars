@@ -1,4 +1,4 @@
-String.prototype.toBase64 = function () {
+export function toBase64() {
   var base64Table =
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
   var charCodes = this.split('').map(function (c) {
@@ -25,9 +25,9 @@ String.prototype.toBase64 = function () {
     }
   }
   return encodedString;
-};
+}
 
-String.prototype.fromBase64 = function () {
+export function fromBase64() {
   var base64Table =
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
   var encodedValues = this.split('').map(function (s1) {
@@ -52,4 +52,4 @@ String.prototype.fromBase64 = function () {
     }
   }
   return decoded;
-};
+}

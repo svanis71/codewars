@@ -1,4 +1,4 @@
-const encodeResistorColors = require('../encodeResistorColors');
+import { encodeResistorColors } from '../encodeResistorColors';
 
 test('10 ohms', () => {
   expect(encodeResistorColors('10 ohms')).toEqual('brown black black gold');
