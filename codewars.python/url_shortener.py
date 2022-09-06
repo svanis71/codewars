@@ -1,6 +1,6 @@
-from _md5 import md5
 from collections import defaultdict
 from textwrap import wrap
+from _md5 import md5
 
 
 class UrlShortener:
