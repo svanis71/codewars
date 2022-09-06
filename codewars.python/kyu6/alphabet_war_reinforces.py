@@ -27,4 +27,3 @@ def alphabet_war_reinforces(reinforces, airstrikes):
             reinforced_string += rch
         battlefield = reinforced_string
     return battlefield
-

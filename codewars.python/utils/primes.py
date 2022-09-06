@@ -1,5 +1,5 @@
 def is_prime(n):
-    if n == 2 or n == 3:
+    if n in (2, 3):
         return True
     if n % 2 == 0 or n % 3 == 0:
         return False
@@ -23,11 +23,11 @@ def get_next_prime(n):
     if not is_prime(n):
         raise ValueError(f'{n} is not a prime')
 
-    isPrime = False
+    found_prime = False
     next_num = n + 2
-    while not isPrime:
-        isPrime = is_prime(next_num)
-        next_num = next_num if isPrime else next_num + 2
+    while not found_prime:
+        found_prime = is_prime(next_num)
+        next_num = next_num if found_prime else next_num + 2
     return next_num
 
 
