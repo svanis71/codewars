@@ -2,12 +2,12 @@ import unittest
 
 from write_out_numbers import number2words
 
-"""
-https://www.codewars.com/kata/52724507b149fa120600031d/train/python
-"""
-
 
 class WriteOutNumbersTests(unittest.TestCase):
+    """
+    Tests for https://www.codewars.com/kata/52724507b149fa120600031d/train/python
+    """
+
     def test_low(self):
         self.assertEqual(number2words(0), "zero")
         self.assertEqual(number2words(1), "one")

@@ -3,9 +3,6 @@ def solve(a, b):
     if a >= b * 2:
         # a = a - 2 * b
         return [b + 1, a]
-    elif b >= a * 2:
+    if b >= a * 2:
         b = b - 2 * a
-    else:
-        return [a, b]
-
-#    return [a, b]
+    return [a, b]

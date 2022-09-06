@@ -28,11 +28,6 @@ class Program:
         'D': lambda x, buf: int(x / buf.buf),
     }
 
-    instruction_set_output = {
-        'N': lambda x: str(x),
-        'P': lambda x: chr(x),
-    }
-
     def __init__(self):
         self.cells = defaultdict(int)
         self.cell_ptr = 0
@@ -40,14 +35,15 @@ class Program:
         self.copy_buf = CopyBuffer()
 
     def _exec_instruction(self, instr: str):
+        curr_cell_value = self.cells[self.cell_ptr]
         if instr in self.instruction_set_arithmetic:
-            self.cells[self.cell_ptr] = self.instruction_set_arithmetic[instr](self.cells[self.cell_ptr])
+            self.cells[self.cell_ptr] = self.instruction_set_arithmetic[instr](curr_cell_value)
         if instr in self.instruction_set_navigate:
             self.cell_ptr = self.instruction_set_navigate[instr](self.cell_ptr)
-        if instr in self.instruction_set_output:
-            self.output += self.instruction_set_output[instr](self.cells[self.cell_ptr])
+        if instr in 'PN':
+            self.output += chr(curr_cell_value) if instr == 'P' else str(curr_cell_value)
         if instr in self.instruction_set_copy_paste:
-            self.cells[self.cell_ptr] = self.instruction_set_copy_paste[instr](self.cells[self.cell_ptr], self.copy_buf)
+            self.cells[self.cell_ptr] = self.instruction_set_copy_paste[instr](curr_cell_value, self.copy_buf)
 
     def loop(self, code: str, pc: int) -> int:
         loop_end = code.find('E', pc)
