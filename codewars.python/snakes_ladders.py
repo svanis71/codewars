@@ -13,7 +13,7 @@ class SnakesLadders:
     def move(self, steps):
         move_to = self.players_positions[0] + steps
         move_to = move_to if move_to <= 100 else 100 + (100 - move_to)
-        move_to = move_to if move_to not in SNAKES_LADDERS.keys() else SNAKES_LADDERS[move_to]
+        move_to = move_to if move_to not in SNAKES_LADDERS else SNAKES_LADDERS[move_to]
         self.players_positions[0] = move_to
         return move_to
 

@@ -18,7 +18,7 @@ def subsequence_sums(arr, s):
         running_sum += v
         if s in (v, running_sum):
             cnt += 1
-            
+
     # map = {}
     # sum = 0
     # for i, v in enumerate(arr):
