@@ -2,9 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/Codewars/v14
-/.vs/Codewars/v15
-/.vs
+.vs/
 /C
 /Codewars/bin/Debug
 obj
