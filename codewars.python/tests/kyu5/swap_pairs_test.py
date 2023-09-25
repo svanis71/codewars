@@ -1,6 +1,8 @@
 import unittest
 from typing import Optional
 
+from parameterized import parameterized
+
 from kyu5.swap_pairs import swap_pairs, Node
 
 
@@ -17,43 +19,27 @@ def create_nodes(num: int) -> Optional[Node]:
     return head
 
 
-def dump(head: Node):
-    ptr = head
+def dump(head: Node) -> str:
+    plist, ptr = '', head
+
     while ptr is not None:
-        print(f'{ptr.valle} ', end='')
+        plist += f'{" -> " if plist != "" else ""}{ptr.valle}'
         ptr = ptr.pnext
-    print('')
+    return plist
 
 
 class MyTestCase(unittest.TestCase):
-    def test_1(self):
-        head = create_nodes(1)
-        swap_pairs(head)
-        dump(head)
 
-    def test_2(self):
-        head = create_nodes(2)
-        dump(head)
+    @parameterized.expand([(0, ''),
+                           (1, 'A'),
+                           (2, 'B -> A'),
+                           (3, 'B -> A -> C'),
+                           (4, 'B -> A -> D -> C'),
+                           (5, 'B -> A -> D -> C -> E')])
+    def test_swap(self, numnodes: int, expected: str):
+        head = create_nodes(numnodes)
         head = swap_pairs(head)
-        dump(head)
-
-    def test_3(self):
-        head = create_nodes(3)
-        dump(head)
-        head = swap_pairs(head)
-        dump(head)
-
-    def test_4(self):
-        head = create_nodes(4)
-        dump(head)
-        head = swap_pairs(head)
-        dump(head)
-
-    def test_5(self):
-        head = create_nodes(5)
-        dump(head)
-        head = swap_pairs(head)
-        dump(head)
+        self.assertEqual(expected, dump(head))
 
 
 if __name__ == '__main__':
