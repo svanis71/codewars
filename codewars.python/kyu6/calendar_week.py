@@ -1,3 +1,6 @@
+"""
+https://www.codewars.com/kata/5c2bedd7eb9aa95abe14d0ed/python
+"""
 from datetime import datetime
 
 days = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334]
