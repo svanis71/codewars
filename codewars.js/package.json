@@ -27,5 +27,8 @@
     "collectCoverage": true,
     "coverageDirectory": "coverage",
     "coverageProvider": "v8"
+  },
+  "dependencies": {
+    "npm": "^10.4.0"
   }
 }
